@@ -36,8 +36,8 @@ namespace XplorStudio.TestCase
             IWebElement element2 = driver.FindElement(By.XPath("//*[@type = 'submit' and @class = 'btn btn-primary btn-lg']"));
             element2.Click();
 
-            IWebElement element3 = driver.FindElement(By.XPath("//*[@type = 'submit' and @class = 'btn btn-primary btn-lg']"));
-            element3.Click();
+            IWebElement elemen4 = driver.FindElement(By.XPath("//*[@type = 'submit' and @class = 'btn btn-primary btn-lg']"));
+            element4.Click();
         }
      
 
