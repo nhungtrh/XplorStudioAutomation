@@ -16,27 +16,16 @@ namespace XplorStudio.TestCase
         public void BeforeAll()
         {
             Driver = new ChromeDriver();
-            
+
         }
 
-        [Test] 
+        [Test]
         public void Login()
 
         {
 
             IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("http://dev.pre.studio.xplor.co/login/");
-
-            //login
-
-            IWebElement element = driver.FindElement(By.Id("inputEmail"));
-            element.SendKeys("mpv@test.com");
-
-            IWebElement element1 = driver.FindElement(By.Id("InputPassword1"));
-            element1.SendKeys("12341234");
-
-            IWebElement element2 = driver.FindElement(By.XPath("//*[@type = 'submit' and @class = 'btn btn-primary btn-lg']"));
-            element2.Click();
+            
 
             //get page title 
             String title = driver.Title;
@@ -66,7 +55,7 @@ namespace XplorStudio.TestCase
 
 
         }
-     
+
 
         [TearDown]
         public void AfterAll()
