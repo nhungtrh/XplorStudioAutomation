@@ -1,0 +1,77 @@
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
+using System.Windows.Forms;
+using WebRegression.PageObjects;
+using WebRegression.Utilities;
+
+namespace WebRegression.TestStructure
+
+{
+	public class CreatePackage : TestBase
+    {
+		
+        private string _currentTestName = "";
+		private readonly LogInPage _LoginCoach = new LogInPage();
+		private readonly ServicesPage _service = new ServicesPage();
+
+
+        #region
+        #endregion
+
+        [Test, Order(1),Category("Services")]
+        public void CreateAPackage()
+        {
+         
+                UiTest(() =>
+                {
+
+                    _LoginCoach.LogIntoSite("new@payout.com", "12341234");
+                    Library.CustomWait(3);
+                    _service.CreatePackage("Package Auto", "Package is created from Automation toool","2", "100", "3", "5");
+
+
+                }, _currentTestName);
+
+        }
+
+        [Test, Order(2), Category("Services")]
+        public void CreateAMembership()
+        {
+
+            UiTest(() =>
+            {
+
+                _LoginCoach.LogIntoSite("new@payout.com", "12341234");
+                Library.CustomWait(3);
+                _service.CreateMembership("Membership Auto", "Membership is created from Automation toool", "5", "100","20", "3", "5");
+
+
+            }, _currentTestName);
+
+        }
+
+        [Test, Order(3), Category("Services")]
+        public void CreateAProduct()
+        {
+            UiTest(() =>
+            {
+                _LoginCoach.LogIntoSite("new@payout.com", "12341234");
+                Library.CustomWait(2);
+                _service.CreateProduct("Product Auto", "Product is created from Automation tool", "100");
+
+            }, _currentTestName);
+        }
+
+        [TearDown]
+        public void AfterEachTest()
+        {
+
+        }
+    }
+}
+
+

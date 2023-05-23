@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XplorStudio", "A11y_Test\XplorStudio.csproj", "{481BE5DD-C123-4C16-9B81-7E672BF0CDDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRegression", "WebRegression\WebRegression.csproj", "{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{481BE5DD-C123-4C16-9B81-7E672BF0CDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{481BE5DD-C123-4C16-9B81-7E672BF0CDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{481BE5DD-C123-4C16-9B81-7E672BF0CDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{481BE5DD-C123-4C16-9B81-7E672BF0CDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A27D9CF8-D47A-4357-B11B-DC441EE5A6D2}
+		SolutionGuid = {73B27D85-0F4E-4F6D-A955-4BCE9C7B3D98}
 	EndGlobalSection
 EndGlobal

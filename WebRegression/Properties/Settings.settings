@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebRegression.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="passWord" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">qa</Value>
+    </Setting>
+    <Setting Name="StageUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">new@payout.com</Value>
+    </Setting>
+    <Setting Name="browser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">chrome</Value>
+    </Setting>
+    <Setting Name="LogFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Regression_Logs.txt</Value>
+    </Setting>
+    <Setting Name="LogFileDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/Users/nhungtran/Documents/AutomationReports/Logs</Value>
+    </Setting>
+    <Setting Name="enviroment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">stage</Value>
+    </Setting>
+    <Setting Name="FireFoxBinaryPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\decheverria\Downloads\FireFoxDriver\geckodriver.exe</Value>
+    </Setting>
+    <Setting Name="ErrorFileDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/Users/nhungtran/Documents/AutomationReports/Errors</Value>
+    </Setting>
+    <Setting Name="ErrorFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">RegressionError.txt</Value>
+    </Setting>
+    <Setting Name="MyEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">fieldedge.qa@gmail.com</Value>
+    </Setting>
+    <Setting Name="Stage_Url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://dev.pre.studio.xplor.co/login</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
