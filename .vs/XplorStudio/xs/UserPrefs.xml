@@ -1,28 +1,45 @@
-﻿<Properties GitUserInfo="UsingGIT">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="A11y_Test/TestCase/TestCase.cs">
+﻿<Properties StartupConfiguration="{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}|" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebRegression/PageObjects/MemberPage.cs">
     <Files>
-      <File FileName="A11y_Test/TestCase/TestCase.cs" Line="71" Column="1" />
+      <File FileName="WebRegression/PageObjects/ServicesPage.cs" />
+      <File FileName="WebRegression/TestStructure/CriticalCases/CreatePackage.cs" />
+      <File FileName="WebRegression/PageObjects/MemberPage.cs" Line="137" Column="19" />
+      <File FileName="WebRegression/PageObjects/Dashboard.cs" />
+      <File FileName="WebRegression/PageObjects/ListMenu.cs" />
+      <File FileName="WebRegression/PageObjects/LogInPage.cs" />
+      <File FileName="WebRegression/PageObjects/Schedule.cs" />
+      <File FileName="WebRegression/PageObjects/PaymentPage.cs" />
+      <File FileName="WebRegression/TestStructure/CriticalCases/CreateMember.cs" />
+      <File FileName="WebRegression/PageObjects/InvoicePage.cs" />
+      <File FileName="WebRegression/Utilities/Library.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="xplorstudio" expanded="True">
-            <Node name="XplorStudio" expanded="True">
-              <Node name="TestCase" expanded="True">
-                <Node name="TestCase.cs" selected="True" />
+          <Node name="XplorStudio" expanded="True">
+            <Node name="WebRegression" expanded="True">
+              <Node name="PageObjects" expanded="True">
+                <Node name="MemberPage.cs" selected="True" />
               </Node>
+              <Node name="TestStructure" expanded="True">
+                <Node name="CriticalCases" expanded="True" />
+                <Node name="FullyAutomated" expanded="True" />
+                <Node name="PartiallyAutomated" expanded="True" />
+              </Node>
+              <Node name="Utilities" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="xplorstudio" expanded="True" selected="True" />
+          <Node name="XplorStudio" expanded="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WebRegression PreferredExecutionTarget="/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

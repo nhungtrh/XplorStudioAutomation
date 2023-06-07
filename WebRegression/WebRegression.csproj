@@ -344,6 +344,9 @@
     <Compile Include="TestStructure\CriticalCases\CreatePayment.cs" />
     <Compile Include="PageObjects\ServicesPage.cs" />
     <Compile Include="TestStructure\CriticalCases\CreatePackage.cs" />
+    <Compile Include="PageObjects\MemberPage.cs" />
+    <Compile Include="TestStructure\CriticalCases\CreateMember.cs" />
+    <Compile Include="PageObjects\InvoicePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\Environment.config" />
@@ -407,9 +410,9 @@
   <Import Project="..\packages\Selenium.Firefox.WebDriver.0.27.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.27.0\build\Selenium.Firefox.WebDriver.targets')" />
   <Import Project="..\packages\Selenium.WebDriver.4.8.2\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.8.2\build\Selenium.WebDriver.targets')" />
   <Import Project="..\packages\Selenium.WebDriver.GeckoDriver.0.33.0\build\Selenium.WebDriver.GeckoDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.33.0\build\Selenium.WebDriver.GeckoDriver.targets')" />
-  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.112.0.5615.4900\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.112.0.5615.4900\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Import Project="..\packages\Microsoft.AspNetCore.Server.IIS.2.2.6\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IIS.2.2.6\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets')" />
   <Import Project="..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.1\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.1\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets')" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.7.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.7.0\build\MongoDB.Libmongocrypt.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.114.0.5735.9000\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.114.0.5735.9000\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>

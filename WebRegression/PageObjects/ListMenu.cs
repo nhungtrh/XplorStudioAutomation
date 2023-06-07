@@ -38,6 +38,7 @@ namespace WebRegression.PageObjects
         private IWebElement Services_Appointments => Library.FindByXPath("//a[@href='#appointment_types_tab']");
         private IWebElement Services_Classes => Library.FindByXPath("//a[@href='#class_types_tab']");
         private IWebElement Services_Discounts => Library.FindByXPath("//a[@href='#discount_types_tab']");
+        private IWebElement Members => Library.FindByXPath("//li[@class='sub-dropdown-menu  nav-item']//a[@href='/app/members/']");
 
 
 
@@ -73,10 +74,10 @@ namespace WebRegression.PageObjects
         public void GoToMember()
         {
 
-           Schedule_Event.Click();
+            Members.Click();
             Library.WaitForPageLoadCompletely();
-            Assert.IsTrue(Driver.Url.Contains("/app/schedule/"));
-            TestContext.Out.WriteLine(" Appointment Block Configuration loaded successfully");
+            Assert.IsTrue(Driver.Url.Contains("/app/members/"));
+            TestContext.Out.WriteLine(" Member page loaded successfully");
 
 
         }

@@ -65,6 +65,29 @@ namespace WebRegression.TestStructure
 
             }, _currentTestName);
         }
+        [Test, Order(4), Category("Services")]
+        public void CreateAnAppointment()
+        {
+            UiTest(() =>
+            {
+                _LoginCoach.LogIntoSite("new@payout.com", "12341234");
+                Library.CustomWait(2);
+                _service.CreateAppointment("Apppointment Auto", "60", "100", "2", "10");
+            }, _currentTestName);
+
+        }
+
+        [Test, Order(5), Category("Serivices")]
+        public void CreateAClass()
+        {
+            UiTest(() =>
+            {
+                _LoginCoach.LogIntoSite("new@payout.com", "12341234");
+                Library.CustomWait(2);
+                _service.CreateClass("Class Auto", "Class is created from Automation tool", "60", "100","5", "2", "10");
+
+            }, _currentTestName);
+        }
 
         [TearDown]
         public void AfterEachTest()

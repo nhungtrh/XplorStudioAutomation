@@ -64,7 +64,37 @@ namespace WebRegression.PageObjects
         private IWebElement ProductSave => Library.FindByXPath("//button[text()='Save' and @class='btn btn-primary']");
         private IWebElement ProductForm => Library.FindByXPath("//form[@id = 'add-product-form']");
 
+        //appointment
+        private IWebElement bnNewAppointment => Library.FindByXPath("//button[@rel='add-session-template']");
+        private IWebElement ApmName => Library.FindByXPath("//input[@placeholder='Appointment name']");
+        private IWebElement ApmDuration => Library.FindByXPath("//input[@name='duration_m']");
+        private IWebElement ApmPrice => Library.FindByXPath("//input[@name='rate']");
+        private IWebElement ApmLateCancel => Library.FindByXPath("//input[@id='is_late_cancel_penalty']//parent::div");
+        private IWebElement ApmLateCancelPolicy => Library.FindByXPath("//input[@name='cancellation_policy']");
+        private IWebElement ApmLateCancelPayment => Library.FindByXPath("//label[@for='late_cancel_penalty_keep_payment']");
+        private IWebElement ApmLateCancelFee => Library.FindByXPath("//label[@for='late_cancel_penalty_charge_fee']");
+        private IWebElement ApmLateCancelFeeAmount => Library.FindByXPath("//input[@name='late_cancel_penalty_charge_fee_amount']");
+        private IWebElement ApmNoShow => Library.FindByXPath("//input[@id='is_no_show_penalty']//parent::div");
+        private IWebElement ApmNoShowPayment => Library.FindByXPath("//label[@for='no_show_penalty_keep_payment']");
+        private IWebElement ApmNoShowFee => Library.FindByXPath("//label[@for='no_show_penalty_charge_fee']");
+        private IWebElement ApmNoShowFeeAmount => Library.FindByXPath("//input[@name='no_show_penalty_charge_fee_amount']");
+        private IWebElement ApmSave => Library.FindByXPath("//button[text()='Save' and @class='btn btn-primary']");
+        private IWebElement ApmMessage => Library.FindByXPath("//div[text()='Successfully saved.']");
 
+        //class
+        private IWebElement bnNewClass => Library.FindByXPath("//button[@rel='add-class-template']");
+        private IWebElement ClassName => Library.FindByXPath("//input[@placeholder='Class name']");
+        private IWebElement ClassDescription => Library.FindByXPath("//textarea[@placeholder='Description']");
+        private IWebElement ClassDuration => Library.FindByXPath("//input[@name='duration_m']");
+        private IWebElement ClassRate => Library.FindByXPath("//input[@name='rate']");
+        private IWebElement ClassCapacity => Library.FindByXPath("//input[@name='max_number']");
+        private IWebElement ClassLateCancel => Library.FindByXPath("//input[@id='is_late_cancel_penalty']//parent::div");
+        private IWebElement CLassLateCancelPolicy => Library.FindByXPath("//input[@name='cancellation_policy']");
+        private IWebElement ClassLateCancelPayment => Library.FindByXPath("//label[@for='late_cancel_penalty_keep_payment']");
+        private IWebElement ClassLateCancelFee => Library.FindByXPath("//label[@for='late_cancel_penalty_charge_fee']");
+        private IWebElement ClassLateCancelFeeAmount => Library.FindByXPath("//input[@name='late_cancel_penalty_charge_fee_amount']");
+        private IWebElement ClassSave => Library.FindByXPath("//button[text()='Save' and @class='btn btn-primary']");
+        private IWebElement ClassMessage => Library.FindByXPath("//div[text()='Successfully saved.']");
 
         #endregion
 
@@ -135,6 +165,57 @@ namespace WebRegression.PageObjects
             ProductSave.Click();
             Library.CustomWait(3);
         }
+
+        public void CreateAppointment(string name, string duration, string price, string cancelHour, string CancelFee)
+        {
+            _listmenu.GoToServices_Appoitment();
+            Library.WaitForPageLoadCompletely();
+            bnNewAppointment.Click();
+            Library.CustomWait(1);
+            ApmName.SendKeys(name);
+            ApmDuration.SendKeys(duration);
+            ApmPrice.SendKeys(price);
+            Library.ScrollToWebElement(ApmLateCancel);
+            ApmLateCancel.Click();
+            ApmLateCancelPolicy.Clear();
+            ApmLateCancelPolicy.SendKeys(cancelHour);
+            ApmLateCancelPayment.Click();
+            ApmLateCancelFee.Click();
+            ApmLateCancelFeeAmount.SendKeys(CancelFee);
+            ApmSave.Click();
+            Library.CustomWait(2);
+            Library.WaitForElementDisplayed(ApmMessage);
+
+        }
+
+        public void CreateClass(string name, string description, string duration, string price, string Maxnumber, string cancelHour, string cancelFee)
+        {
+            _listmenu.GoToServices_Classes();
+            Library.WaitForPageLoadCompletely();
+            bnNewClass.Click();
+            Library.CustomWait(1);
+            ClassName.SendKeys(name);
+            ClassDescription.SendKeys(description);
+            ClassDuration.Clear();
+            ClassDuration.SendKeys(duration);
+            Library.ScrollToWebElement(ClassRate);
+            ClassRate.SendKeys(price);
+            Library.ScrollToWebElement(ClassCapacity);
+            ClassCapacity.SendKeys(Maxnumber);
+            Library.ScrollToWebElement(ClassLateCancel);
+            ClassLateCancel.Click();
+            CLassLateCancelPolicy.Clear();
+            CLassLateCancelPolicy.SendKeys(cancelHour);
+            ClassLateCancelPayment.Click();
+            ClassLateCancelFee.Click();
+            ClassLateCancelFeeAmount.SendKeys(cancelFee);
+            Library.CustomWait(1);
+            ClassSave.Click();
+            Library.CustomWait(2);
+            Library.WaitForElementDisplayed(ClassMessage);
+
+        }
+
     }
 }
 
