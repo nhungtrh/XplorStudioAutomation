@@ -25,7 +25,7 @@ namespace WebRegression.PageObjects
 
 
       
-        //locators
+        //locators - add new member 
         private IWebElement bnNewMember => Library.FindByXPath("//a[@id='add-client-link']");
 		private IWebElement statusList => Library.FindByXPath("//div[@class='add-edit-modal-current-client-status inline-block']");
 		private IWebElement statusActive => Library.FindByXPath("//div[@class='bf-dropdown-button-list']//div[@data-status='1']");
@@ -58,7 +58,13 @@ namespace WebRegression.PageObjects
 		private IWebElement RemoveAllClient => Library.FindByXPath("//div[@class='bf-dropdown-button-one-item mass-remove-clients']");
 		private IWebElement bnConfirmRemoveClient => Library.FindByXPath("//div[@class='bootstrap-dialog-footer-buttons']//button[2]");
 		private IWebElement MessageRemoved => Library.FindByXPath("//div[text()='Clients removed']");
+        private IWebElement NoClient => Library.FindByXPath("//div[@class='select-all-clients-blue-checkbox' and @style='display: none;']");
 
+        //Member profile
+        private IWebElement MemberFinance => Library.FindByXPath("//a[@href='#client_payments']");
+        private IWebElement MemberFinanceInvoice => Library.FindByXPath("//a[@href='#client_invoices']");
+        private IWebElement FirstMember => Library.FindByXPath("//td[@aria-describedby='active-grid-index_first']");
+        
 
         #endregion
         public void CreateMember(string first, string last, string email, string mobile, string note, string cost)
@@ -68,14 +74,19 @@ namespace WebRegression.PageObjects
 
             //Remove data before creating new one
             SearchMember.SendKeys(email);
-            Library.CustomWait(1);
+            Library.WaitForPageLoadCompletely();
+            Library.CustomWait(2);
+
+            Boolean Noclient = NoMemberFound.Displayed;
+
 
             if
-                (Library.IsElementPresent(By.XPath("//label[@for='select-all-client']//parent::div[@style='display: none;']")) == true) //no client found 
+                //(Library.IsElementVisible(By.XPath("//label[@for='select-all-client']//parent::div[@style='display: none;']")) == true) //no client found
+                (Noclient == true) 
             {
+              
 
-
-                
+                //Create a new member after removing existing data
                 bnNewMember.Click();
                 Library.CustomWait(2);
                 statusList.Click();
@@ -111,11 +122,14 @@ namespace WebRegression.PageObjects
                 MemberSave.Click();
                 Library.CustomWait(2);
                 Library.WaitForElementDisplayed(MemberMessage);
+
+           
             }
 
 
             else
             {
+                Library.CustomWait(2);
                 //remove existing data
                 SelectAllmember.Click();
                 Library.CustomWait(1);
@@ -134,7 +148,7 @@ namespace WebRegression.PageObjects
                 bnConfirmRemoveClient.Click();
                 Library.WaitForElementDisplayed(MessageRemoved);
 
-                //Create a new member after removing existing data
+
                 bnNewMember.Click();
                 Library.CustomWait(2);
                 statusList.Click();
@@ -177,7 +191,25 @@ namespace WebRegression.PageObjects
 
         }
 
+        public void GotoMemberInvoice()
+        {
+            Library.WaitForPageLoadCompletely();
+            MemberFinance.Click();
+            Library.WaitForPageLoadCompletely();
+            MemberFinanceInvoice.Click();
+            Assert.IsTrue(Driver.Url.Contains("/finances/invoices"));
+            TestContext.Out.WriteLine(" Member Invoice loaded successfully");
+        }
 
+        public void SearchAMember(string email)
+        {
+            Library.WaitForPageLoadCompletely();
+            SearchMember.SendKeys(email);
+            Library.CustomWait(3);
+            FirstMember.Click();
+            Library.WaitForPageLoadCompletely();
+        }
+         
     }
 }
 

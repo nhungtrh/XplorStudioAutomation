@@ -1143,10 +1143,10 @@ namespace WebRegression.Utilities
 
         }
 
-        internal static void IsElementVisible(IWebElement paymentDateDisabled)
-        {
-            throw new NotImplementedException();
-        }
+        //internal static void IsElementVisible(IWebElement paymentDateDisabled)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         //public static void CheckOptionSelected(IWebElement elem)
         //{
