@@ -11,15 +11,21 @@ using WebRegression.Utilities;
 namespace WebRegression.TestStructure
 
 {
-	public class CreatePackage : TestBase
+	public class CreateService : TestBase
     {
 		
         private string _currentTestName = "";
 		private readonly LogInPage _LoginCoach = new LogInPage();
 		private readonly ServicesPage _service = new ServicesPage();
+        private readonly ListMenu _menu = new ListMenu();
+
 
 
         #region
+        private IWebElement PackageAUTO => Library.FindByXPath("//td[@title='Package Auto']//parent::tr//i");
+        private IWebElement RemovePackage => Library.FindByXPath("//button[@class='btn left remove-modal-footer-btn']");
+        private IWebElement YesRemove => Library.FindByXPath("//button[@class='btn btn-primary' and text()='Yes']");
+
         #endregion
 
         [Test, Order(1),Category("Services")]
@@ -28,10 +34,30 @@ namespace WebRegression.TestStructure
          
                 UiTest(() =>
                 {
-
+                    
                     _LoginCoach.LogIntoSite("new@payout.com", "12341234");
                     Library.CustomWait(3);
+                    //remove data before adding package
+                    _menu.GoToServices_Package();
+                    Library.CustomWait(2);
+                    Boolean ExistingPackage = PackageAUTO.Displayed;
+
+                    if (ExistingPackage == true)
+                    {
+                        PackageAUTO.Click();
+                        Library.CustomWait(1);
+                        RemovePackage.Click();
+                        Library.CustomWait(1);
+                        YesRemove.Click();
+
+                    }
+                    else
+                    {
+
+                    }
+
                     _service.CreatePackage("Package Auto", "Package is created from Automation toool","2", "100", "3", "5");
+                    
 
 
                 }, _currentTestName);

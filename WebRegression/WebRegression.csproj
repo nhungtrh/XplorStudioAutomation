@@ -343,11 +343,14 @@
     <Compile Include="PageObjects\Schedule.cs" />
     <Compile Include="TestStructure\CriticalCases\CreatePayment.cs" />
     <Compile Include="PageObjects\ServicesPage.cs" />
-    <Compile Include="TestStructure\CriticalCases\CreatePackage.cs" />
+    <Compile Include="TestStructure\CriticalCases\CreateService.cs" />
     <Compile Include="PageObjects\MemberPage.cs" />
     <Compile Include="TestStructure\CriticalCases\CreateMember.cs" />
     <Compile Include="PageObjects\InvoicePage.cs" />
     <Compile Include="TestStructure\CriticalCases\CreateAnInvoice.cs" />
+    <Compile Include="TestStructure\CriticalCases\CreateAClass.cs" />
+    <Compile Include="TestStructure\CriticalCases\CreateAnAppointment.cs" />
+    <Compile Include="TestStructure\CriticalCases\AssignServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\Environment.config" />

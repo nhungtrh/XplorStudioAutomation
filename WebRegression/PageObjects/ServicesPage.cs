@@ -94,7 +94,7 @@ namespace WebRegression.PageObjects
         private IWebElement ClassLateCancelFee => Library.FindByXPath("//label[@for='late_cancel_penalty_charge_fee']");
         private IWebElement ClassLateCancelFeeAmount => Library.FindByXPath("//input[@name='late_cancel_penalty_charge_fee_amount']");
         private IWebElement ClassSave => Library.FindByXPath("//button[text()='Save' and @class='btn btn-primary']");
-        private IWebElement ClassMessage => Library.FindByXPath("//div[text()='Successfully saved.']");
+        private IWebElement ClassMessage => Library.FindByXPath("//div[text()='Classes created']");
 
         #endregion
 

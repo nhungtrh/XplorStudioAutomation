@@ -64,7 +64,24 @@ namespace WebRegression.PageObjects
         private IWebElement MemberFinance => Library.FindByXPath("//a[@href='#client_payments']");
         private IWebElement MemberFinanceInvoice => Library.FindByXPath("//a[@href='#client_invoices']");
         private IWebElement FirstMember => Library.FindByXPath("//td[@aria-describedby='active-grid-index_first']");
-        
+
+        //Assign package
+        private IWebElement MemberService => Library.FindByXPath("//a[@href='#client_services']");
+        private IWebElement AssignAPackage => Library.FindByXPath("//button[@class='btn add-memb-pack-prod-btn orange-button ']");
+        private IWebElement SelectPackage4084 => Library.FindByXPath("//a[@data-id='4084']");
+        private IWebElement SavePackage => Library.FindByXPath("//button[@id='add-package-button']");
+        private IWebElement SendAgreement => Library.FindByXPath("//button[@id='btn_ar']");
+
+
+
+        //AssignMembership
+
+
+        //AssignProduct
+        private IWebElement AssignAProduct => Library.FindByXPath("//button[@class='btn add-memb-pack-prod-btn  orange-button dropdown-toggle ']");
+        private IWebElement SelectProduct23579 => Library.FindByXPath("//a[@data-id = '23579']");
+        private IWebElement SaveProduct => Library.FindByXPath("//button[@Id='add-product-button']");
+
 
         #endregion
         public void CreateMember(string first, string last, string email, string mobile, string note, string cost)
@@ -201,6 +218,17 @@ namespace WebRegression.PageObjects
             TestContext.Out.WriteLine(" Member Invoice loaded successfully");
         }
 
+        public void GotoMemberServices()
+        {
+            Library.WaitForPageLoadCompletely();
+            MemberService.Click();
+            Library.WaitForPageLoadCompletely();
+            Assert.IsTrue(Driver.Url.Contains("/services"));
+            TestContext.Out.WriteLine(" Member Services loaded successfully");
+
+
+        }
+
         public void SearchAMember(string email)
         {
             Library.WaitForPageLoadCompletely();
@@ -209,7 +237,38 @@ namespace WebRegression.PageObjects
             FirstMember.Click();
             Library.WaitForPageLoadCompletely();
         }
-         
+
+        public void AssignPackage()
+        {
+            AssignAPackage.Click();
+            Library.CustomWait(1);
+            Library.ScrollToWebElement(SelectPackage4084);
+            SelectPackage4084.Click();
+            Library.CustomWait(2);
+            SavePackage.Click();
+            Library.CustomWait(1);
+            SendAgreement.Click();
+            Library.WaitForPageLoadCompletely();
+
+
+        }
+
+        public void AssignProduct()
+        {
+            AssignAProduct.Click();
+            Library.CustomWait(1);
+            Library.ScrollToWebElement(SelectProduct23579);
+            SelectProduct23579.Click();
+            Library.CustomWait(1);
+            SaveProduct.Click();
+            Library.CustomWait(1);
+            SendAgreement.Click();
+            Library.WaitForPageLoadCompletely();
+
+
+        }
+    
+
     }
 }
 
