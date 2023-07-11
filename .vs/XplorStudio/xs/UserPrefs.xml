@@ -1,9 +1,15 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{416D9F19-082F-4C84-8FAB-94DE79CDAE1B}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.WebRegression PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebRegression/TestStructure/CriticalCases/AssignServices.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebRegression/PageObjects/MemberPage.cs">
     <Files>
       <File FileName="WebRegression/PageObjects/ServicesPage.cs" />
-      <File FileName="WebRegression/PageObjects/MemberPage.cs" Line="266" Column="49" />
+      <File FileName="WebRegression/PageObjects/MemberPage.cs" Line="297" Column="6" />
       <File FileName="WebRegression/PageObjects/ListMenu.cs" />
       <File FileName="WebRegression/PageObjects/Schedule.cs" />
       <File FileName="WebRegression/TestStructure/CriticalCases/CreateMember.cs" />
@@ -16,18 +22,18 @@
       <File FileName="WebRegression/TestStructure/CriticalCases/CreateAClass.cs" />
       <File FileName="WebRegression/TestStructure/CriticalCases/CreateAnAppointment.cs" />
       <File FileName="WebRegression/TestStructure/CriticalCases/CreateService.cs" />
-      <File FileName="WebRegression/TestStructure/CriticalCases/AssignServices.cs" Line="51" Column="1" />
+      <File FileName="WebRegression/TestStructure/CriticalCases/AssignServices.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="XplorStudio" expanded="True">
             <Node name="WebRegression" expanded="True">
-              <Node name="PageObjects" expanded="True" />
+              <Node name="PageObjects" expanded="True">
+                <Node name="MemberPage.cs" selected="True" />
+              </Node>
               <Node name="TestStructure" expanded="True">
-                <Node name="CriticalCases" expanded="True">
-                  <Node name="AssignServices.cs" selected="True" />
-                </Node>
+                <Node name="CriticalCases" expanded="True" />
                 <Node name="FullyAutomated" expanded="True" />
                 <Node name="PartiallyAutomated" expanded="True" />
               </Node>
@@ -38,23 +44,9 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="XplorStudio" expanded="True">
-            <Node name="WebRegression" expanded="True">
-              <Node name="WebRegression.TestStructure" expanded="True">
-                <Node name="AssignServices" expanded="True">
-                  <Node name="AssignAProduct" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="XplorStudio" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.WebRegression PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>

@@ -52,6 +52,22 @@ namespace WebRegression.TestStructure
             }, _currentTestName);
         }
 
+        [Test, Order(3), Category("Assign Service")]
+
+        public void AssignAMembership()
+        {
+            UiTest(() =>
+            {
+                _LoginCoach.LogIntoSite("new@payout.com", "12341234");
+                _listmenu.GoToMember();
+                _memberPage.SearchAMember("auto@test.com");
+                _memberPage.GotoMemberServices();
+                _memberPage.AssignMembership();
+
+
+            }, _currentTestName);
+        }
+
     }
 }
 

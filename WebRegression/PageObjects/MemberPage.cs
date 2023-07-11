@@ -75,6 +75,12 @@ namespace WebRegression.PageObjects
 
 
         //AssignMembership
+        private IWebElement AssignAMembership => Library.FindByXPath("//button[@class='btn add-memb-pack-prod-btn orange-button dropdown-toggle ']");
+        private IWebElement SelectMembership9737 => Library.FindByXPath("//a[@data-id='9737']");
+        private IWebElement MembershipStartDate => Library.FindByXPath("//input[@data-date-format='MM/DD/YYYY']");
+        private IWebElement DatePicker => Library.FindByXPath("//table[@class='ui-datepicker-calendar']");
+        private IWebElement TodayDate => Library.FindByXPath("//a[@class='ui-state-default ui-state-highlight']");
+        private IWebElement SaveMembership => Library.FindByXPath("//button[@id='add-membership-button']");
 
 
         //AssignProduct
@@ -266,6 +272,25 @@ namespace WebRegression.PageObjects
             Library.WaitForPageLoadCompletely();
 
 
+        }
+
+        public void AssignMembership()
+        {
+            AssignAMembership.Click();
+            Library.CustomWait(1);
+            Library.ScrollToWebElement(SelectMembership9737);
+            SelectMembership9737.Click();
+            Library.CustomWait(1);
+            MembershipStartDate.Click();
+            Library.moveMouseToElement(DatePicker);
+            TodayDate.Click();
+            Library.CustomWait(1);
+            SaveMembership.Click();
+            Library.WaitForElementDisplayed(SendAgreement);
+            SendAgreement.Click();
+            Library.WaitForPageLoadCompletely();
+
+            
         }
     
 
